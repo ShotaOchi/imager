@@ -116,21 +116,6 @@
 
 // Disable silly warnings on some Microsoft VC++ compilers.
 #ifdef _MSC_VER
-#pragma warning(push)
-#pragma warning(disable:4127)
-#pragma warning(disable:4244)
-#pragma warning(disable:4311)
-#pragma warning(disable:4312)
-#pragma warning(disable:4319)
-#pragma warning(disable:4512)
-#pragma warning(disable:4571)
-#pragma warning(disable:4640)
-#pragma warning(disable:4706)
-#pragma warning(disable:4710)
-#pragma warning(disable:4800)
-#pragma warning(disable:4804)
-#pragma warning(disable:4820)
-#pragma warning(disable:4996)
 
 #ifndef _CRT_SECURE_NO_DEPRECATE
 #define _CRT_SECURE_NO_DEPRECATE 1
@@ -563,10 +548,7 @@ extern "C" {
 // (see methods 'CImg<T>::{load,save}_exr()').
 #ifdef cimg_use_openexr
 #if __GNUC__>=5
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated"
-#pragma GCC diagnostic ignored "-Wdeprecated-copy"
-#pragma GCC diagnostic ignored "-Wshadow"
+
 #endif
 #include "ImfRgbaFile.h"
 #include "ImfInputFile.h"
@@ -574,7 +556,7 @@ extern "C" {
 #include "ImfMatrixAttribute.h"
 #include "ImfArray.h"
 #if __GNUC__>=5
-#pragma GCC diagnostic pop
+
 #endif
 #endif
 
@@ -63373,7 +63355,7 @@ namespace cil = cimg_library_suffixed;
 #define PI 3.141592653589793238462643383
 #endif
 #ifdef _MSC_VER
-#pragma warning(pop)
+
 #endif
 
 #endif
