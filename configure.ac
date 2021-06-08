@@ -56,7 +56,8 @@ AC_PATH_PROG([PKGCONF],[pkg-config],[],[$PATH:/usr/local/bin:ext/bin:ext:/sw/bin
     #DONT_HAVE_X11='-Dcimg_display=0'
   else
     AC_MSG_RESULT([X11 library not found, please install X11 library if you need the display capabilities of CImg.])
-    DONT_HAVE_X11='-Dcimg_display=0'
+    #DONT_HAVE_X11='-Dcimg_display=0'
+    DONT_HAVE_X11=''
   fi
   if test x$no_x = xyes ; then
     AC_MSG_ERROR([X11 not found but required, configure aborted.])
